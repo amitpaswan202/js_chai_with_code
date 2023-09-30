@@ -33,7 +33,7 @@ let name = "amit"
 // }
 
 // ============================
-const contentString = "The quick brown fox jumps 24 over the lazy dog. If the dog barked, was it really lazy?";
+const contentString = "               The quick brown fox jumps 24 over the lazy dog. If the dog barked, was it really lazy?";
 
 // document.body.innerHTML = contentString.big()
 // contentString.
@@ -50,4 +50,14 @@ const contentString = "The quick brown fox jumps 24 over the lazy dog. If the do
 // console.log(contentString.length);
 // console.log(contentString.match(/[A-Z]/g));
 // console.log(contentString.match(/[A-Z]/gi));
-console.log(contentString.match(/(?<animal>dog|cat) jumps over/));
+// console.log(contentString.match(/(?<animal>dog|cat) jumps over/));
+// console.log(contentString.substring(0,23));
+// console.log(contentString.slice(3,45));
+console.log(contentString.trim()); ////   for starting blank spacess
+
+const url = 'https://astrologywhispers.in/products/pale-emerald-gem'
+
+// console.log(url.replaceAll('-','%20'));
+// console.log(url.includes('astrology'));
+console.log(url.split('-'));
+
