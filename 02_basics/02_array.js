@@ -17,4 +17,4 @@ let real_Another_Array =  another_Array.flat(Infinity)
 // console.log(another_Array);
 
 console.log( Array.isArray('Amit'));
-console.log( Array.from('Amit'));
+console.log( Array.from('Amit'));/////completed
