@@ -49,6 +49,7 @@ function addone(num1){
 
 
 console.log(addtwo(6));
+
 const addtwo = function(num2){
     return num2 + 2
 }
