@@ -60,6 +60,24 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `<span>${bmi}</span>`;
   }
 });
+///=================== my solution ===============
+if(bmi > 24.9) {
+      const myResult = document.createTextNode("your are over wight")
+      const newDiv = document.createElement('div');
+      newDiv.appendChild(myResult)
+      results.appendChild(newDiv)
+
+    }else if(bmi >=18.6 && bmi <= 24.9 ){
+      const myResult = document.createTextNode("your are Fitt")
+      const newDiv = document.createElement('div');
+      newDiv.appendChild(myResult)
+      results.appendChild(newDiv)
+    }else{
+      const myResult = document.createTextNode("your are Under Weight")
+      const newDiv = document.createElement('div');
+      newDiv.appendChild(myResult)
+      results.appendChild(newDiv)
+    }
 
 
 ```
