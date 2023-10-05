@@ -1,5 +1,4 @@
 ///// for in loops
-
 const myObj = {
     "IN":"india",
     "UK": "united kindom",
