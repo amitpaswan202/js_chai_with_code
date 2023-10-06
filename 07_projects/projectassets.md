@@ -193,6 +193,79 @@ function newGame() {
     playGame = true;
   });
 }
+//////////////////////my approch is diferent but code is working fine
+const guess = document.querySelector('#guessField');
+const subButton = document.querySelector('#subt');
+const preGuess =document.querySelector('.guesses')
+const numberOfAttempt = document.querySelector('.lastResult')
+const newGame = document.querySelector('#newGame')
+
+let  guessList = []
+let attempt = 10
+let guestNumber = Math.round(Math.random()*10 + 1)
+
+subButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  const guestVal = parseInt(guess.value);
+  
+   CheckValidation(guestVal);
+   preGuess.innerHTML = guessList
+   console.log(guessList)
+   guess.value = ""
+  
+  
+});
+
+function CheckValidation(guess) {
+  if (isNaN(guess)) {
+    alert('Please inter a valid number');
+  } else if (guess < 1) {
+    alert('Please inter a valid number more than 1 ');
+  } else if (guess > 100) {
+    alert('Please inter a valid number less than 100 ');
+  }else{
+  
+    guessNumber(guess)
+    if(guessList.length < 10){
+      // if(guess === guestNumber){
+       
+      // }
+      guessList.push(guess)
+      attempt -= 1
+      numberOfAttempt.innerText = attempt
+      
+    }else{
+      alert('yout number of attempt has finish')
+      document.querySelector('#guessField').setAttribute('disabled','')
+      
+    }
+    
+  }
+}
+function addGuessValidate(guess){
+ 
+}
+///////////////////////
+newGame.addEventListener('click',function(e){
+     e.preventDefault()
+     guessList = []
+     preGuess.innerHTML = guessList
+     attempt = 10
+     numberOfAttempt.innerText = attempt
+     document.querySelector('#guessField').removeAttribute('disabled','')
+     document.body.style.backgroundColor = "212121"
+   })
+ 
+////////////////////
+function guessNumber(guess){
+  
+  if(guess === guestNumber){
+    document.body.style.backgroundColor = "green"
+  }
+  console.log('guest Number : ',guestNumber)
+}
+
+
 
 
 ```
