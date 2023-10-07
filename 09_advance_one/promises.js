@@ -29,25 +29,41 @@
 // })
 
 
-const promiseFour = new Promise(function(resolve, reject){
-    const userLogged = false
-    setTimeout(function(){
-       if(userLogged === true){
-        resolve({username: "Chai", email: "chai@example.com"})
-       }
-       else{
-        console.log("something went wrong");
-       }
+// const promiseFour = new Promise(function(resolve, reject){
+//     const userLogged = false
+//     setTimeout(function(){
+//        if(userLogged === true){
+//         resolve({username: "Chai", email: "chai@example.com"})
+//        }
+//        else{
+//         console.log("something went wrong");
+//        }
       
-    }, 1000)
+//     }, 1000)
     
-})
-promiseFour.then(function(user){
-     return user.username
-}).then((e) =>{
-    console.log(e)
-}).catch(function(err){
-    console.log(err)
-}).finally(function(){
-    console.log();
-})
+// })
+// promiseFour.then(function(user){
+//      return user.username
+// }).then((e) =>{
+//     console.log(e)
+// }).catch(function(err){
+//     console.log(err)
+// }).finally(function(){
+//     console.log();
+// })
+
+
+async function Myfetch(){
+  const UrlFetch =  fetch('https://api.github.com/users/amitpaswan202')
+
+  UrlFetch.then(
+    function(e){
+        const recieveVal = e.json()
+        recieveVal.then((data) =>{
+            console.log(data)
+        })
+    //    console.log(e)
+    }
+  )
+}
+Myfetch()
