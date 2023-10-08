@@ -56,14 +56,21 @@
 async function Myfetch(){
   const UrlFetch =  fetch('https://api.github.com/users/amitpaswan202')
 
-  UrlFetch.then(
+  UrlFetch.
+  then(
     function(e){
-        const recieveVal = e.json()
-        recieveVal.then((data) =>{
-            console.log(data)
-        })
-    //    console.log(e)
+        
+        console.log(e.length);
+     return e.json()
+    //  console.log(e.length())
+
     }
   )
+  .then(function(responce){
+    console.log(responce.length)
+  })
+  .catch(function(err){
+    console.log(err)
+  })
 }
 Myfetch()
